@@ -60,22 +60,3 @@ class WassersteinDistance(Distance):
         values1 = np.sort(point1.get_values())
         values2 = np.sort(point2.get_values())
         return np.sum(np.abs(values1 - values2)) / len(values1)
-
-if __name__ == "__main__":
-    # Puntos de prueba
-    p1 = Point(3, [1, 2, 3])
-    p2 = Point(3, [4, 5, 6])
-
-    # Instanciar clases de distancia
-    distances = [
-        ManhattanDistance(),
-        EuclideanDistance(),
-        ChebyshevDistance(),
-        CanberraDistance(),
-        MahalanobisDistance(),
-        WassersteinDistance()
-    ]
-
-    # Calcular y mostrar distancias
-    for distance in distances:
-        print(f"{distance.__class__.__name__}: {distance.compute_distance(p1, p2)}")
