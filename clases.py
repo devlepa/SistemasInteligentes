@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 import numpy as np
 
-# Clase Point
+# Class Point
 class Point:
     def __init__(self, ndim, values):
         self.ndim = ndim
@@ -14,7 +14,7 @@ class Point:
         return self.values
 
     def __str__(self):
-        return f"Point(dim={self.ndim}, values={self.values})"
+        return f'Point(dim={self.ndim}, values={self.values})'
 
 # Clase abstracta Distance
 class Distance(ABC):
